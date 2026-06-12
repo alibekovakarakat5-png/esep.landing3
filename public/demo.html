@@ -195,7 +195,7 @@ const CLIENTS=[
 
 function payroll(fot,emp){
   const opv=fot*R.opv, vosms=fot*R.vosms;
-  const ipnBase=Math.max(0,fot-opv-vosms-14*MRP*(emp||1)), ipn=ipnBase*R.ipn;
+  const ipnBase=Math.max(0,fot-opv-vosms-30*MRP*(emp||1)), ipn=ipnBase*R.ipn;  // базовый вычет 30 МРП/сотр (2026, ст.403)
   const opvr=fot*R.opvr, so=Math.max(0,(fot-opv))*R.so, oosms=fot*R.oosms;
   return {opv,vosms,ipn,opvr,so,oosms,total:opv+vosms+ipn+opvr+so+oosms};
 }
@@ -280,7 +280,7 @@ function renderDetail(){
       <span class="docnote">Доход и расход разносятся из выписки автоматически — без ручного ввода первички.</span>
     </div>
     <div class="sec-t">Ставки · Налоговый кодекс 2026</div>
-    <div class="rates">МРП <b>4 325 ₸</b> · МЗП <b>85 000 ₸</b> &nbsp;|&nbsp; Упрощёнка (910) <b>4%</b> · Самозанятый <b>4%</b> · НДС <b>16%</b> · КПН ТОО <b>20%</b> &nbsp;|&nbsp; ОПВ <b>10%</b> · ОПВР <b>3,5%</b> · СО <b>5%</b> · ВОСМС <b>2%</b> · ООСМС <b>3%</b> · ИПН <b>10%</b> (вычет 14 МРП/сотр.)</div>`;
+    <div class="rates">МРП <b>4 325 ₸</b> · МЗП <b>85 000 ₸</b> &nbsp;|&nbsp; Упрощёнка (910) <b>4%</b> · Самозанятый <b>4%</b> · НДС <b>16%</b> · КПН ТОО <b>20%</b> &nbsp;|&nbsp; ОПВ <b>10%</b> · ОПВР <b>3,5%</b> · СО <b>5%</b> · ВОСМС <b>2%</b> · ООСМС <b>3%</b> · ИПН <b>10%</b> (базовый вычет 30 МРП/сотр.)</div>`;
 }
 function fcard(code,name,badge,sumL,val,form){return `<div class="fcard" onclick="openForm('${form}',${SEL})"><div class="fh"><span class="code">${code}</span><span class="fbadge ${badge}">${badge==='green'?'готова':badge==='amber'?'в работе':'к расчёту'}</span></div><div class="fn">${name}</div><div class="fsum">${sumL}<b>${fmt(val)} ₸</b></div><div class="open">Открыть форму →</div></div>`;}
 function fotBlock(c,r){const p=r.pr;if(!p)return'';return `<div class="sec-t">Зарплата и соцплатежи · ФОТ ${fmt(c.fot)} ₸/мес</div><div class="fot"><table>
