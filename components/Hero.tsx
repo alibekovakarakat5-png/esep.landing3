@@ -34,7 +34,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl text-white/80 text-xs font-medium">
             <Sparkles className="w-3.5 h-3.5 text-accent-green" />
             <span className="uppercase tracking-wider">
-              Кабинет бухгалтера под Налоговый кодекс 2026
+              Система управления бухгалтерской фирмой · НК 2026
             </span>
           </div>
         </motion.div>
@@ -46,9 +46,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.05] text-balance"
         >
-          Все клиенты вашей фирмы —
+          Система управления
           <br />
-          <span className="gradient-text-light">в одном кабинете.</span>
+          <span className="gradient-text-light">бухгалтерской фирмой.</span>
         </motion.h1>
 
         {/* Подзаголовок */}
@@ -58,9 +58,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8 text-center text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed text-balance"
         >
-          Для бухгалтерских фирм и аутсорс-бухгалтеров Казахстана. Формы
-          910, 200, 300 считаются автоматически и выгружаются в формат ИСНА.
-          Заменяет связку «1С + Excel + кабинет КГД» одним инструментом.
+          Все клиенты, сроки и расчёты — в одном месте. Рутину (выписка →
+          налог → формы 910/200/300, ЭСФ) Esep берёт на себя.{' '}
+          <span className="text-white font-semibold">Веди больше клиентов без найма</span>{' '}
+          ещё одного бухгалтера.
         </motion.p>
 
         {/* CTA-кнопки */}
