@@ -4,6 +4,7 @@ import Marquee from '@/components/Marquee';
 import Problem from '@/components/Problem';
 import Solution from '@/components/Solution';
 import Cabinet from '@/components/Cabinet';
+import Automation from '@/components/Automation';
 import Services from '@/components/Services';
 import Custom from '@/components/Custom';
 import Process from '@/components/Process';
@@ -22,6 +23,7 @@ export default function Home() {
       <Problem />
       <Solution />
       <Cabinet />
+      <Automation />
       <Services />
       <Custom />
       <Process />

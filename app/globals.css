@@ -111,3 +111,89 @@ body {
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
 }
+
+/* ── Automation showcase (рутина → налог → ИСНА · анимация на лупе) ─────── */
+.az-sec { position: relative; overflow: hidden; }
+.az-sec .az-win {
+  max-width: 760px; margin: 0 auto; border-radius: 16px; overflow: hidden; background: #fff;
+  box-shadow: 0 40px 90px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.08);
+  animation: azFloaty 7s ease-in-out infinite;
+}
+@keyframes azFloaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+.az-sec .az-bar { height: 42px; background: #F0F4F8; border-bottom: 1px solid #D9E2EC; display: flex; align-items: center; gap: 8px; padding: 0 16px; }
+.az-sec .az-bar i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.az-sec .az-bar .d1 { background: #FF5F57; } .az-sec .az-bar .d2 { background: #FEBC2E; } .az-sec .az-bar .d3 { background: #28C840; }
+.az-sec .az-url { flex: 1; display: flex; justify-content: center; }
+.az-sec .az-url span { font-family: ui-monospace, monospace; font-size: 12px; color: #486581; background: #fff; border: 1px solid #D9E2EC; border-radius: 7px; padding: 4px 14px; }
+.az-sec .az-body { position: relative; height: 420px; background: #FAFCFF; }
+.az-sec .scene { position: absolute; inset: 0; padding: 22px; }
+.az-sec .scene1 { animation: azSc1 18s infinite; }
+.az-sec .scene2 { animation: azSc2 18s infinite; }
+.az-sec .scene3 { animation: azSc3 18s infinite; }
+@keyframes azSc1 { 0% { opacity: 0; transform: translateY(14px); } 4%,30% { opacity: 1; transform: none; } 34%,100% { opacity: 0; transform: translateY(-8px); } }
+@keyframes azSc2 { 0%,33% { opacity: 0; transform: translateY(14px); } 37%,63% { opacity: 1; transform: none; } 67%,100% { opacity: 0; transform: translateY(-8px); } }
+@keyframes azSc3 { 0%,66% { opacity: 0; transform: translateY(14px); } 70%,96% { opacity: 1; transform: none; } 99%,100% { opacity: 0; transform: translateY(-8px); } }
+.az-sec .az-hd { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 700; color: #0F2B46; margin-bottom: 16px; }
+.az-sec .az-hd .ic { width: 28px; height: 28px; border-radius: 8px; background: rgba(14,165,233,.12); color: #0EA5E9; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+.az-sec .az-cols { display: grid; grid-template-columns: 1fr 230px; gap: 16px; }
+.az-sec .trow { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #D9E2EC; border-radius: 11px; padding: 10px 12px; margin-bottom: 8px; }
+.az-sec .trow .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.az-sec .dot-in { background: #22C55E; } .az-sec .dot-out { background: #F43F5E; }
+.az-sec .trow .tx { flex: 1; min-width: 0; }
+.az-sec .trow .nm { font-size: 13px; font-weight: 600; color: #0F2B46; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.az-sec .trow .dt { font-size: 11px; color: #486581; }
+.az-sec .trow .am { font-size: 13px; font-weight: 800; }
+.az-sec .am-in { color: #22C55E; } .az-sec .am-out { color: #F43F5E; }
+.az-sec .tg { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; flex-shrink: 0; }
+.az-sec .tg-in { background: rgba(34,197,94,.12); color: #15803D; } .az-sec .tg-out { background: rgba(244,63,94,.1); color: #BE123C; }
+.az-sec .res { background: linear-gradient(160deg, rgba(14,165,233,.1), rgba(34,197,94,.08)); border: 1px solid rgba(14,165,233,.25); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; justify-content: center; height: 100%; }
+.az-sec .res .ok { font-size: 12px; font-weight: 700; color: #15803D; display: flex; align-items: center; gap: 6px; }
+.az-sec .res .lbl { font-size: 12px; color: #486581; margin-top: 14px; }
+.az-sec .res .big { font-size: 30px; font-weight: 800; color: #0F2B46; letter-spacing: -.5px; margin-top: 2px; }
+.az-sec .res .form { font-size: 12px; color: #0EA5E9; font-weight: 700; margin-top: 6px; }
+.az-sec .fcards { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 16px; }
+.az-sec .fc { background: #fff; border: 1px solid #D9E2EC; border-radius: 12px; padding: 13px; }
+.az-sec .fc-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 3px; }
+.az-sec .fc-code { font-size: 14px; font-weight: 800; color: #0F2B46; }
+.az-sec .fc-badge { font-size: 9px; font-weight: 800; padding: 2px 7px; border-radius: 6px; background: rgba(34,197,94,.12); color: #15803D; }
+.az-sec .fc-nm { font-size: 11px; color: #486581; margin-bottom: 10px; min-height: 28px; }
+.az-sec .fc-bar { height: 6px; border-radius: 4px; background: #F0F4F8; overflow: hidden; }
+.az-sec .fc-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #0EA5E9, #22C55E); width: 8%; animation: azBar 18s infinite; }
+@keyframes azBar { 0%,37% { width: 8%; } 50%,100% { width: 100%; } }
+.az-sec .isna { display: flex; align-items: center; gap: 12px; background: rgba(34,197,94,.1); border: 1px solid rgba(34,197,94,.3); border-radius: 14px; padding: 15px 18px; animation: azIsna 18s infinite; }
+@keyframes azIsna { 0%,50% { opacity: 0; transform: translateY(10px); } 55%,63% { opacity: 1; transform: none; } 67%,100% { opacity: 0; } }
+.az-sec .isna .chk { width: 34px; height: 34px; border-radius: 50%; background: #22C55E; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.az-sec .isna .t1 { font-size: 14px; font-weight: 800; color: #0F2B46; }
+.az-sec .isna .t2 { font-size: 12px; color: #486581; }
+.az-sec .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 18px; }
+.az-sec .stat { background: #fff; border: 1px solid #D9E2EC; border-radius: 14px; padding: 18px; text-align: center; animation: azPop 18s infinite; }
+@keyframes azPop { 0%,68% { transform: scale(.94); } 73%,96% { transform: scale(1); } 99%,100% { transform: scale(.94); } }
+.az-sec .stat .v { font-size: 34px; font-weight: 800; letter-spacing: -1px; }
+.az-sec .stat .l { font-size: 11px; color: #486581; text-transform: uppercase; letter-spacing: .05em; margin-top: 4px; font-weight: 600; }
+.az-sec .v-navy { color: #0F2B46; } .az-sec .v-green { color: #22C55E; } .az-sec .v-sky { color: #0EA5E9; }
+.az-sec .clients { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; margin-bottom: 16px; }
+.az-sec .cchip { display: flex; align-items: center; gap: 5px; background: #fff; border: 1px solid #D9E2EC; border-radius: 20px; padding: 5px 11px; font-size: 11px; font-weight: 600; color: #0F2B46; }
+.az-sec .cchip .c { color: #22C55E; font-weight: 800; }
+.az-sec .ftag { text-align: center; font-size: 16px; font-weight: 800; color: #fff; }
+.az-sec .ftag .hl { color: #22C55E; }
+.az-sec .fcaps { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; max-width: 760px; margin: 30px auto 0; }
+.az-sec .fcap { display: flex; gap: 12px; padding: 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); border-top: 3px solid transparent; background: rgba(255,255,255,.03); opacity: .5; }
+.az-sec .fcap .ci { width: 38px; height: 38px; border-radius: 10px; flex-shrink: 0; background: rgba(255,255,255,.07); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+.az-sec .fcap .ct { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.2; }
+.az-sec .fcap .cd { font-size: 12px; color: rgba(255,255,255,.55); margin-top: 3px; line-height: 1.4; }
+.az-sec .fcap1 { animation: azFcA 18s infinite; } .az-sec .fcap2 { animation: azFcB 18s infinite; } .az-sec .fcap3 { animation: azFcC 18s infinite; }
+@keyframes azFcA { 0%,2% { opacity: .5; border-top-color: transparent; background: rgba(255,255,255,.03); } 5%,30% { opacity: 1; border-top-color: #0EA5E9; background: rgba(14,165,233,.1); } 34%,100% { opacity: .5; border-top-color: transparent; background: rgba(255,255,255,.03); } }
+@keyframes azFcB { 0%,33% { opacity: .5; border-top-color: transparent; background: rgba(255,255,255,.03); } 37%,63% { opacity: 1; border-top-color: #0EA5E9; background: rgba(14,165,233,.1); } 67%,100% { opacity: .5; border-top-color: transparent; background: rgba(255,255,255,.03); } }
+@keyframes azFcC { 0%,66% { opacity: .5; border-top-color: transparent; background: rgba(255,255,255,.03); } 70%,96% { opacity: 1; border-top-color: #22C55E; background: rgba(34,197,94,.1); } 99%,100% { opacity: .5; border-top-color: transparent; background: rgba(255,255,255,.03); } }
+@media (max-width: 780px) {
+  .az-sec .az-cols { grid-template-columns: 1fr; }
+  .az-sec .res { flex-direction: row; align-items: center; justify-content: space-between; height: auto; }
+  .az-sec .res .lbl { margin-top: 0; }
+  .az-sec .fcaps { grid-template-columns: 1fr; max-width: 420px; }
+  .az-sec .az-body { height: 460px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .az-sec .az-win, .az-sec .scene, .az-sec .fc-fill, .az-sec .isna, .az-sec .stat,
+  .az-sec .fcap1, .az-sec .fcap2, .az-sec .fcap3 { animation: none !important; }
+  .az-sec .scene2, .az-sec .scene3 { opacity: 0; }
+}
